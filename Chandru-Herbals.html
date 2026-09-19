@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chandru Herbals | Pure Handcrafted Herbal Care — Est. 2020</title>
+  <meta name="description" content="Chandru Herbals — 100% chemical-free herbal hair oil, nalangu maavu bath powder and pure shikakai. Handcrafted traditional care since 2020." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            herb: {
+              900: '#1b4332',
+              800: '#2d6a4f',
+              700: '#40916c',
+              100: '#e9edc9',
+              50: '#f4f1de',
+            },
+            amber: {
+              400: '#e0a96d',
+              500: '#d4a373',
+              600: '#b8860b',
+            },
+            ink: '#2b2b2b',
+          },
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'DM Sans', system-ui, sans-serif; color: #2b2b2b; }
+    .font-display { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .hero-bg {
+      background:
+        radial-gradient(ellipse at 15% 20%, rgba(64,145,108,.18), transparent 50%),
+        radial-gradient(ellipse at 85% 70%, rgba(212,163,115,.14), transparent 45%),
+        linear-gradient(160deg, #f4f1de 0%, #e9edc9 45%, #f4f1de 100%);
+    }
+    .nav-scrolled {
+      background: rgba(27, 67, 50, 0.97);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 30px rgba(27, 67, 50, 0.2);
+    }
+    .product-card { transition: transform .25s ease, box-shadow .25s ease; }
+    .product-card:hover { transform: translateY(-6px); box-shadow: 0 22px 40px -16px rgba(27, 67, 50, 0.25); }
+    .ingredient-pill { transition: transform .2s ease, background .2s ease; }
+    .ingredient-pill:hover { transform: scale(1.04); background: #2d6a4f; color: #fff; }
+  </style>
+</head>
+<body class="bg-herb-50 text-ink antialiased">
+
+  <!-- ===================== HEADER ===================== -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-herb-900/95">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16 md:h-[72px]">
+        <a href="#home" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-full bg-herb-800 border border-amber-500/40 flex items-center justify-center shadow-inner">
+            <span class="font-display text-amber-400 text-xl font-bold leading-none">C</span>
+          </div>
+          <div class="leading-tight">
+            <div class="font-display text-white text-lg md:text-xl font-bold tracking-wide">Chandru Herbals</div>
+            <div class="text-[10px] uppercase tracking-[0.2em] text-amber-400/90 font-semibold">Est. 2020</div>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-7">
+          <a href="#home" class="text-sm font-medium text-white/80 hover:text-amber-400 transition">Home</a>
+          <a href="#story" class="text-sm font-medium text-white/80 hover:text-amber-400 transition">Our Story</a>
+          <a href="#products" class="text-sm font-medium text-white/80 hover:text-amber-400 transition">Products</a>
+          <a href="#why" class="text-sm font-medium text-white/80 hover:text-amber-400 transition">Why Herbal</a>
+          <a href="#reviews" class="text-sm font-medium text-white/80 hover:text-amber-400 transition">Reviews</a>
+          <a href="#order" class="text-sm font-medium text-white/80 hover:text-amber-400 transition">Contact Us</a>
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <a href="https://wa.me/919876543210?text=Hi%20Chandru%20Herbals%2C%20I%20would%20like%20to%20order." target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-[#25D366] hover:bg-[#1ebe57] text-white text-xs sm:text-sm font-semibold shadow-lg shadow-green-900/20 transition">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span class="hidden sm:inline">Order on WhatsApp</span>
+            <span class="sm:hidden">WhatsApp</span>
+          </a>
+          <button id="mobileBtn" class="lg:hidden p-2 text-white/90" aria-label="Open menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-white/10 bg-herb-900">
+      <div class="px-4 py-4 space-y-2">
+        <a href="#home" class="block py-2 text-white/90 hover:text-amber-400">Home</a>
+        <a href="#story" class="block py-2 text-white/90 hover:text-amber-400">Our Story</a>
+        <a href="#products" class="block py-2 text-white/90 hover:text-amber-400">Products</a>
+        <a href="#why" class="block py-2 text-white/90 hover:text-amber-400">Why Herbal</a>
+        <a href="#reviews" class="block py-2 text-white/90 hover:text-amber-400">Reviews</a>
+        <a href="#order" class="block py-2 text-white/90 hover:text-amber-400">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="home" class="hero-bg pt-24 pb-16 md:pt-32 md:pb-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-herb-900/10 border border-herb-800/20 mb-6">
+          <span class="w-2 h-2 rounded-full bg-herb-700 animate-pulse"></span>
+          <span class="text-xs sm:text-sm font-semibold text-herb-900 tracking-wide">Handcrafted · Chemical-Free · Est. 2020</span>
+        </div>
+        <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-herb-900 leading-[1.15] mb-5">
+          Pure, Natural & Handcrafted<br class="hidden sm:block" />
+          <span class="text-herb-800">Herbal Care for Your Family</span>
+        </h1>
+        <p class="text-base sm:text-lg text-ink/75 leading-relaxed mb-8 max-w-2xl mx-auto">
+          100% chemical-free bath powders, hair oils &amp; shikakai prepared with traditional authentic ingredients — the way our elders trusted nature.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="#products" class="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-herb-900 hover:bg-herb-800 text-white font-semibold shadow-lg shadow-herb-900/25 transition">
+            Explore Products
+          </a>
+          <a href="https://wa.me/919876543210?text=Hi%20Chandru%20Herbals%2C%20I%20want%20to%20know%20more%20about%20your%20products." target="_blank" rel="noopener"
+             class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full border-2 border-herb-800/30 hover:border-herb-800 text-herb-900 font-semibold bg-white/50 transition">
+            <svg class="w-5 h-5 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+        <div class="mt-12 grid grid-cols-3 gap-4 max-w-lg mx-auto">
+          <div class="text-center">
+            <div class="font-display text-2xl sm:text-3xl font-bold text-herb-800">3</div>
+            <div class="text-xs sm:text-sm text-ink/60 font-medium">Core Products</div>
+          </div>
+          <div class="text-center border-x border-herb-800/15">
+            <div class="font-display text-2xl sm:text-3xl font-bold text-herb-800">2020</div>
+            <div class="text-xs sm:text-sm text-ink/60 font-medium">Since</div>
+          </div>
+          <div class="text-center">
+            <div class="font-display text-2xl sm:text-3xl font-bold text-herb-800">100%</div>
+            <div class="text-xs sm:text-sm text-ink/60 font-medium">Natural</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== OUR STORY ===================== -->
+  <section id="story" class="py-16 md:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+        <div>
+          <span class="text-amber-600 font-semibold text-xs tracking-[0.2em] uppercase">Our Story</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-herb-900 mt-2 mb-5">Rooted in Tradition. Made for Today’s Families.</h2>
+          <p class="text-ink/75 leading-relaxed mb-4">
+            Chandru Herbals began in 2020 with a simple belief: everyday hair and skin care should be pure, honest, and close to nature — the way traditional Indian homes prepared it.
+          </p>
+          <p class="text-ink/75 leading-relaxed mb-6">
+            We handcraft small-batch herbal hair oil, nalangu maavu bath powder, and pure shikakai using time-tested roots, leaves, and botanicals. No mineral oils. No harsh sulfates. No synthetic fragrances.
+          </p>
+          <ul class="space-y-3 text-sm text-ink/80">
+            <li class="flex gap-2"><span class="text-herb-700 font-bold">✓</span> Family-first, chemical-free formulations</li>
+            <li class="flex gap-2"><span class="text-herb-700 font-bold">✓</span> Traditional recipes, modern hygiene standards</li>
+            <li class="flex gap-2"><span class="text-herb-700 font-bold">✓</span> Made for health-conscious homes across India</li>
+          </ul>
+        </div>
+        <div class="relative">
+          <div class="rounded-2xl bg-gradient-to-br from-herb-100 to-herb-50 border border-herb-800/10 p-8 md:p-10 shadow-sm">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-white rounded-xl p-5 text-center border border-herb-800/5">
+                <div class="text-3xl mb-2">🌿</div>
+                <div class="font-semibold text-herb-900 text-sm">Herbal Oils</div>
+              </div>
+              <div class="bg-white rounded-xl p-5 text-center border border-herb-800/5">
+                <div class="text-3xl mb-2">✨</div>
+                <div class="font-semibold text-herb-900 text-sm">Bath Powders</div>
+              </div>
+              <div class="bg-white rounded-xl p-5 text-center border border-herb-800/5 col-span-2">
+                <div class="text-3xl mb-2">🌱</div>
+                <div class="font-semibold text-herb-900 text-sm">Pure Shikakai &amp; Botanicals</div>
+                <p class="text-xs text-ink/55 mt-1">Prepared with care · Packed with trust</p>
+              </div>
+            </div>
+          </div>
+          <div class="absolute -z-10 -bottom-3 -right-3 w-full h-full rounded-2xl bg-amber-500/10"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRODUCTS ===================== -->
+  <section id="products" class="py-16 md:py-24 bg-herb-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-amber-600 font-semibold text-xs tracking-[0.2em] uppercase">Core Collection</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-herb-900 mt-2 mb-4">Our Handcrafted Products</h2>
+        <p class="text-ink/70">Three essentials for pure hair and skin rituals — free from chemicals, full of tradition.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <!-- Hair Oil -->
+        <article class="product-card bg-white rounded-2xl border border-herb-800/10 overflow-hidden shadow-sm">
+          <div class="h-44 bg-gradient-to-br from-herb-800 to-herb-900 flex items-center justify-center relative">
+            <span class="text-6xl" aria-hidden="true">💧</span>
+            <div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+              <span class="text-[10px] font-bold uppercase tracking-wide bg-white/95 text-herb-900 px-2 py-1 rounded-full">100% Natural</span>
+              <span class="text-[10px] font-bold uppercase tracking-wide bg-amber-500 text-white px-2 py-1 rounded-full">Traditional Recipe</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-bold text-herb-900 mb-2">Herbal Hair Oil</h3>
+            <p class="text-sm text-ink/70 mb-4 leading-relaxed">Nourishing, anti-hairfall oil infused with traditional roots and herbs for stronger, healthier hair.</p>
+            <ul class="text-sm text-ink/80 space-y-2 mb-5">
+              <li class="flex gap-2"><span class="text-herb-700">•</span> Deep root nourishment</li>
+              <li class="flex gap-2"><span class="text-herb-700">•</span> Helps reduce hair fall</li>
+              <li class="flex gap-2"><span class="text-herb-700">•</span> Natural herbs infused</li>
+              <li class="flex gap-2"><span class="text-herb-700">•</span> Zero mineral oil</li>
+            </ul>
+            <a href="#order" onclick="preselectProduct('Herbal Hair Oil')" class="inline-flex w-full justify-center py-2.5 rounded-full bg-herb-900 hover:bg-herb-800 text-white text-sm font-semibold transition">Order Now</a>
+          </div>
+        </article>
+
+        <!-- Bath Powder -->
+        <article class="product-card bg-white rounded-2xl border border-herb-800/10 overflow-hidden shadow-sm">
+          <div class="h-44 bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center relative">
+            <span class="text-6xl" aria-hidden="true">🛁</span>
+            <div class="absolute top-3 left-3">
+              <span class="text-[10px] font-bold uppercase tracking-wide bg-white/95 text-herb-900 px-2 py-1 rounded-full">All Skin Types</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-bold text-herb-900 mb-2">Herbal Bath Powder</h3>
+            <p class="text-xs text-amber-700 font-semibold mb-1">Nalangu Maavu</p>
+            <p class="text-sm text-ink/70 mb-4 leading-relaxed">100% natural skin-brightening &amp; fragrant body-wash alternative for a gentle traditional cleanse.</p>
+            <ul class="text-sm text-ink/80 space-y-2 mb-5">
+              <li class="flex gap-2"><span class="text-herb-700">•</span> Gentle exfoliation</li>
+              <li class="flex gap-2"><span class="text-herb-700">•</span> Natural fragrance</li>
+              <li class="flex gap-2"><span class="text-herb-700">•</span> Brightens skin tone</li>
+              <li class="flex gap-2"><span class="text-herb-700">•</span> Chemical-free cleanser</li>
+            </ul>
+            <a href="#order" onclick="preselectProduct('Herbal Bath Powder (Nalangu Maavu)')" class="inline-flex w-full justify-center py-2.5 rounded-full bg-herb-900 hover:bg-herb-800 text-white text-sm font-semibold transition">Order Now</a>
+          </div>
+        </article>
+
+        <!-- Shikakai -->
+        <article class="product-card bg-white rounded-2xl border border-herb-800/10 overflow-hidden shadow-sm">
+          <div class="h-44 bg-gradient-to-br from-herb-700 to-herb-800 flex items-center justify-center relative">
+            <span class="text-6xl" aria-hidden="true">🍃</span>
+            <div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+              <span class="text-[10px] font-bold uppercase tracking-wide bg-white/95 text-herb-900 px-2 py-1 rounded-full">Sulfate-Free</span>
+              <span class="text-[10px] font-bold uppercase tracking-wide bg-herb-900 text-white px-2 py-1 rounded-full">Chemical-Free</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-bold text-herb-900 mb-2">Pure Shikakai Powder</h3>
+            <p class="text-sm text-ink/70 mb-4 leading-relaxed">Traditional chemical-free hair cleanser &amp; conditioner for clean, soft, naturally healthy hair.</p>
+            <ul class="text-sm text-ink/80 space-y-2 mb-5">
+              <li class="flex gap-2"><span class="text-herb-700">•</span> Helps prevent dandruff</li>
+              <li class="flex gap-2"><span class="text-herb-700">•</span> Supports thick hair growth</li>
+              <li class="flex gap-2"><span class="text-herb-700">•</span> Natural conditioner</li>
+              <li class="flex gap-2"><span class="text-herb-700">•</span> No synthetic sulfates</li>
+            </ul>
+            <a href="#order" onclick="preselectProduct('Pure Shikakai Powder')" class="inline-flex w-full justify-center py-2.5 rounded-full bg-herb-900 hover:bg-herb-800 text-white text-sm font-semibold transition">Order Now</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WHY HERBAL ===================== -->
+  <section id="why" class="py-16 md:py-24 bg-herb-900 text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-amber-400 font-semibold text-xs tracking-[0.2em] uppercase">Why Choose Us</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mt-2 mb-4">Why Chandru Herbals?</h2>
+        <p class="text-white/70">Trust built on purity, tradition, and care you can feel in every ritual.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 transition">
+          <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-amber-500/20 flex items-center justify-center text-2xl">🌿</div>
+          <h3 class="font-semibold mb-2">100% Natural</h3>
+          <p class="text-sm text-white/65 leading-relaxed">Chemical-free care with authentic herbal ingredients only.</p>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 transition">
+          <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-amber-500/20 flex items-center justify-center text-2xl">👐</div>
+          <h3 class="font-semibold mb-2">Handcrafted</h3>
+          <p class="text-sm text-white/65 leading-relaxed">Traditional formulations prepared in careful small batches.</p>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 transition">
+          <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-amber-500/20 flex items-center justify-center text-2xl">🚫</div>
+          <h3 class="font-semibold mb-2">No Synthetics</h3>
+          <p class="text-sm text-white/65 leading-relaxed">No artificial preservatives or synthetic fragrances.</p>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 transition">
+          <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-amber-500/20 flex items-center justify-center text-2xl">💚</div>
+          <h3 class="font-semibold mb-2">Eco &amp; Kind</h3>
+          <p class="text-sm text-white/65 leading-relaxed">Eco-conscious packaging and cruelty-free values.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INGREDIENTS ===================== -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-amber-600 font-semibold text-xs tracking-[0.2em] uppercase">Nature’s Kitchen</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-herb-900 mt-2 mb-3">Ingredient Highlights</h2>
+        <p class="text-ink/70 text-sm sm:text-base">Botanicals chosen for purity, tradition, and gentle results.</p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-3">
+        <span class="ingredient-pill px-4 py-2 rounded-full bg-herb-100 text-herb-900 text-sm font-semibold border border-herb-800/10">Amla</span>
+        <span class="ingredient-pill px-4 py-2 rounded-full bg-herb-100 text-herb-900 text-sm font-semibold border border-herb-800/10">Hibiscus</span>
+        <span class="ingredient-pill px-4 py-2 rounded-full bg-herb-100 text-herb-900 text-sm font-semibold border border-herb-800/10">Neem</span>
+        <span class="ingredient-pill px-4 py-2 rounded-full bg-herb-100 text-herb-900 text-sm font-semibold border border-herb-800/10">Rose Petals</span>
+        <span class="ingredient-pill px-4 py-2 rounded-full bg-herb-100 text-herb-900 text-sm font-semibold border border-herb-800/10">Vetiver</span>
+        <span class="ingredient-pill px-4 py-2 rounded-full bg-herb-100 text-herb-900 text-sm font-semibold border border-herb-800/10">Shikakai</span>
+        <span class="ingredient-pill px-4 py-2 rounded-full bg-herb-100 text-herb-900 text-sm font-semibold border border-herb-800/10">Herbal Roots</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== REVIEWS ===================== -->
+  <section id="reviews" class="py-16 md:py-24 bg-herb-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-amber-600 font-semibold text-xs tracking-[0.2em] uppercase">Testimonials</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-herb-900 mt-2 mb-3">What Families Say</h2>
+        <p class="text-ink/70">Real experiences from customers who chose natural care.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <blockquote class="bg-white rounded-2xl p-6 border border-herb-800/10 shadow-sm">
+          <div class="text-amber-500 text-sm mb-3">★★★★★</div>
+          <p class="text-ink/80 text-sm leading-relaxed mb-4">“The herbal hair oil smells authentic and my hair fall reduced within weeks. Finally a product that feels homemade and honest.”</p>
+          <footer class="text-sm font-semibold text-herb-900">— Priya S.</footer>
+          <div class="text-xs text-ink/50 mt-0.5">Hair Oil user</div>
+        </blockquote>
+        <blockquote class="bg-white rounded-2xl p-6 border border-herb-800/10 shadow-sm">
+          <div class="text-amber-500 text-sm mb-3">★★★★★</div>
+          <p class="text-ink/80 text-sm leading-relaxed mb-4">“Nalangu maavu is gentle on my kids’ skin and leaves a natural fragrance. We’ve stopped using chemical body washes at home.”</p>
+          <footer class="text-sm font-semibold text-herb-900">— Anitha R.</footer>
+          <div class="text-xs text-ink/50 mt-0.5">Bath Powder user</div>
+        </blockquote>
+        <blockquote class="bg-white rounded-2xl p-6 border border-herb-800/10 shadow-sm">
+          <div class="text-amber-500 text-sm mb-3">★★★★★</div>
+          <p class="text-ink/80 text-sm leading-relaxed mb-4">“Pure shikakai — no dryness, no sulfates. Hair feels soft and clean. Chandru Herbals delivers true traditional quality.”</p>
+          <footer class="text-sm font-semibold text-herb-900">— Karthik M.</footer>
+          <div class="text-xs text-ink/50 mt-0.5">Shikakai user</div>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ORDER / CONTACT ===================== -->
+  <section id="order" class="py-16 md:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-amber-600 font-semibold text-xs tracking-[0.2em] uppercase">Order / Inquiry</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-herb-900 mt-2 mb-3">Quick Order on WhatsApp</h2>
+        <p class="text-ink/70">Select your product, share details, and we’ll receive your order instantly on WhatsApp.</p>
+      </div>
+
+      <div class="grid lg:grid-cols-5 gap-8 lg:gap-10">
+        <div class="lg:col-span-3 bg-herb-50 rounded-2xl border border-herb-800/10 p-6 sm:p-8">
+          <form id="orderForm" class="space-y-4" onsubmit="sendWhatsAppOrder(event)">
+            <div>
+              <label class="block text-sm font-semibold text-herb-900 mb-1.5">Product *</label>
+              <select id="orderProduct" required class="w-full px-4 py-2.5 rounded-xl border border-herb-800/15 bg-white focus:outline-none focus:ring-2 focus:ring-herb-700/30 text-sm">
+                <option value="">Select product</option>
+                <option>Herbal Hair Oil</option>
+                <option>Herbal Bath Powder (Nalangu Maavu)</option>
+                <option>Pure Shikakai Powder</option>
+                <option>Combo / Mixed Order</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-herb-900 mb-1.5">Quantity *</label>
+              <select id="orderQty" required class="w-full px-4 py-2.5 rounded-xl border border-herb-800/15 bg-white focus:outline-none focus:ring-2 focus:ring-herb-700/30 text-sm">
+                <option value="">Select quantity</option>
+                <option>1 unit</option>
+                <option>2 units</option>
+                <option>3 units</option>
+                <option>5 units</option>
+                <option>Custom (mention in notes)</option>
+              </select>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-semibold text-herb-900 mb-1.5">Your Name *</label>
+                <input id="orderName" type="text" required class="w-full px-4 py-2.5 rounded-xl border border-herb-800/15 bg-white focus:outline-none focus:ring-2 focus:ring-herb-700/30 text-sm" placeholder="Full name" />
+              </div>
+              <div>
+                <label class="block text-sm font-semibold text-herb-900 mb-1.5">Phone *</label>
+                <input id="orderPhone" type="tel" required class="w-full px-4 py-2.5 rounded-xl border border-herb-800/15 bg-white focus:outline-none focus:ring-2 focus:ring-herb-700/30 text-sm" placeholder="10-digit mobile" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-herb-900 mb-1.5">Delivery Address *</label>
+              <textarea id="orderAddress" required rows="3" class="w-full px-4 py-2.5 rounded-xl border border-herb-800/15 bg-white focus:outline-none focus:ring-2 focus:ring-herb-700/30 text-sm resize-none" placeholder="Door no, street, city, pincode"></textarea>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-herb-900 mb-1.5">Notes (optional)</label>
+              <input id="orderNotes" type="text" class="w-full px-4 py-2.5 rounded-xl border border-herb-800/15 bg-white focus:outline-none focus:ring-2 focus:ring-herb-700/30 text-sm" placeholder="Any special request" />
+            </div>
+            <button type="submit" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#25D366] hover:bg-[#1ebe57] text-white font-semibold shadow-lg transition">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Send Order on WhatsApp
+            </button>
+          </form>
+        </div>
+
+        <div class="lg:col-span-2 space-y-5">
+          <div class="bg-herb-900 text-white rounded-2xl p-6 sm:p-7">
+            <h3 class="font-display text-xl font-bold mb-4">Contact Details</h3>
+            <div class="space-y-4 text-sm">
+              <div>
+                <div class="text-amber-400 font-semibold text-xs uppercase tracking-wider mb-1">Phone / WhatsApp</div>
+                <a href="tel:+919876543210" class="hover:text-amber-400 transition">+91 98765 43210</a>
+              </div>
+              <div>
+                <div class="text-amber-400 font-semibold text-xs uppercase tracking-wider mb-1">Email</div>
+                <a href="mailto:hello@chandruherbals.com" class="hover:text-amber-400 transition">hello@chandruherbals.com</a>
+              </div>
+              <div>
+                <div class="text-amber-400 font-semibold text-xs uppercase tracking-wider mb-1">Address</div>
+                <p class="text-white/75">South India · Exact location shared on order confirmation</p>
+              </div>
+              <div>
+                <div class="text-amber-400 font-semibold text-xs uppercase tracking-wider mb-1">Delivery</div>
+                <p class="text-white/75">Pan-India courier · Dispatch in 2–4 working days (typical)</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-herb-50 border border-herb-800/10 rounded-2xl p-5 text-sm text-ink/75 leading-relaxed">
+            <strong class="text-herb-900">How ordering works:</strong> Submit the form → WhatsApp opens with your order details → We confirm availability, price &amp; delivery.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-herb-900 text-white pt-14 pb-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div>
+          <div class="font-display text-xl font-bold mb-1">Chandru Herbals</div>
+          <div class="text-amber-400 text-xs tracking-[0.2em] uppercase font-semibold mb-3">Est. 2020</div>
+          <p class="text-white/55 text-sm leading-relaxed">Handcrafted pure herbal &amp; personal care — chemical-free traditions for modern families.</p>
+        </div>
+        <div>
+          <h4 class="text-amber-400 text-xs font-bold uppercase tracking-wider mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm text-white/65">
+            <li><a href="#home" class="hover:text-amber-400 transition">Home</a></li>
+            <li><a href="#story" class="hover:text-amber-400 transition">Our Story</a></li>
+            <li><a href="#products" class="hover:text-amber-400 transition">Products</a></li>
+            <li><a href="#why" class="hover:text-amber-400 transition">Why Herbal</a></li>
+            <li><a href="#order" class="hover:text-amber-400 transition">Order / Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-amber-400 text-xs font-bold uppercase tracking-wider mb-4">Products</h4>
+          <ul class="space-y-2 text-sm text-white/65">
+            <li>Herbal Hair Oil</li>
+            <li>Nalangu Maavu Bath Powder</li>
+            <li>Pure Shikakai Powder</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-amber-400 text-xs font-bold uppercase tracking-wider mb-4">Connect</h4>
+          <div class="flex gap-3 mb-4">
+            <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/10 hover:bg-[#25D366] flex items-center justify-center transition" aria-label="WhatsApp">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-amber-500 flex items-center justify-center transition" aria-label="Instagram">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+          </div>
+          <p class="text-white/45 text-xs leading-relaxed">For general wellness support only. Not a medical substitute. Patch-test recommended.</p>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between gap-3 text-sm text-white/40">
+        <p>© 2026 Chandru Herbals. All rights reserved.</p>
+        <p>Handcrafted pure herbal care · Est. 2020</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    const mobileBtn = document.getElementById('mobileBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+    // Sticky nav style
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) navbar.classList.add('nav-scrolled');
+      else navbar.classList.remove('nav-scrolled');
+    });
+
+    // Preselect product from cards
+    function preselectProduct(name) {
+      const sel = document.getElementById('orderProduct');
+      if (sel) sel.value = name;
+    }
+
+    // WhatsApp order builder — replace number with real business WhatsApp
+    const WA_NUMBER = '919876543210';
+
+    function sendWhatsAppOrder(e) {
+      e.preventDefault();
+      const product = document.getElementById('orderProduct').value.trim();
+      const qty = document.getElementById('orderQty').value.trim();
+      const name = document.getElementById('orderName').value.trim();
+      const phone = document.getElementById('orderPhone').value.trim();
+      const address = document.getElementById('orderAddress').value.trim();
+      const notes = document.getElementById('orderNotes').value.trim();
+
+      if (!/^\d{10}$/.test(phone.replace(/\D/g, '').slice(-10))) {
+        alert('Please enter a valid 10-digit phone number.');
+        return;
+      }
+
+      let msg = '🌿 *Chandru Herbals — New Order*%0A%0A';
+      msg += '*Product:* ' + encodeURIComponent(product) + '%0A';
+      msg += '*Quantity:* ' + encodeURIComponent(qty) + '%0A';
+      msg += '*Name:* ' + encodeURIComponent(name) + '%0A';
+      msg += '*Phone:* ' + encodeURIComponent(phone) + '%0A';
+      msg += '*Address:*%0A' + encodeURIComponent(address) + '%0A';
+      if (notes) msg += '%0A*Notes:* ' + encodeURIComponent(notes);
+
+      window.open('https://wa.me/' + WA_NUMBER + '?text=' + msg, '_blank');
+    }
+  </script>
+</body>
+</html>
